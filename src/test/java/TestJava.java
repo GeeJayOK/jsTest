@@ -3,10 +3,9 @@ import org.junit.jupiter.api.*;
 public class TestJava extends BaseTest implements Locators {
 
     private static BaseTest baseTest;
-    //private BaseTest baseTest = null;
 
     @BeforeAll
-    public static void setUp() {
+    static void setUp() {
         baseTest = new BaseTest();
         baseTest.getDriver();
     }
@@ -16,7 +15,7 @@ public class TestJava extends BaseTest implements Locators {
     void testLeftField() {
         baseTest.switchToFrame(FR_TOP);
         baseTest.switchToFrame(FR_L);
-        String a = baseTest.checker(L);
+        String a = baseTest.checker(BODY);
         Assertions.assertEquals(a, "LEFT");
     }
 
@@ -25,7 +24,7 @@ public class TestJava extends BaseTest implements Locators {
     void testMiddleField() {
         baseTest.switchToFrame(FR_TOP);
         baseTest.switchToFrame(FR_M);
-        String a = baseTest.checker(M);
+        String a = baseTest.checker(MIDDLE);
         Assertions.assertEquals(a, "MIDDLE");
     }
 
@@ -34,7 +33,7 @@ public class TestJava extends BaseTest implements Locators {
     void testRightField() {
         baseTest.switchToFrame(FR_TOP);
         baseTest.switchToFrame(FR_R);
-        String a = baseTest.checker(R);
+        String a = baseTest.checker(BODY);
         Assertions.assertEquals(a, "RIGHT");
     }
 
@@ -42,8 +41,7 @@ public class TestJava extends BaseTest implements Locators {
     @DisplayName("Test bottom field")
     void testBottomField() {
         baseTest.switchToFrame(FR_BOT);
-        baseTest.switchToFrame(B);
-        String a = baseTest.checker(B);
+        String a = baseTest.checker(BODY);
         Assertions.assertEquals(a, "BOTTOM");
     }
 
@@ -53,7 +51,7 @@ public class TestJava extends BaseTest implements Locators {
     }
 
     @AfterAll
-    public static void tearDown() {
+    static void shotDown() {
         baseTest.tearDown();
     }
 }

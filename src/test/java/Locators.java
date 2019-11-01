@@ -8,9 +8,7 @@ public interface Locators {
    String FR_M = "frame-middle";
    String FR_R = "frame-right";
 
+   String BODY = "//body";
+   String MIDDLE = "//div";
 
-   String L = "//html/body";
-   String R = "//html/body";
-   String M = "//html/body/div";
-   String B = "//html/body";
 }
