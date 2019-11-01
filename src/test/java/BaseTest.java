@@ -45,7 +45,9 @@ public class BaseTest implements Locators {
         return driver.findElement(By.xpath(element)).isEnabled();
     }
 
-
+    void uploadFile(String file) {
+        driver.findElement(By.xpath(F_INPUT)).sendKeys(file);
+    }
 
     public static void tearDown() {
         driver.quit();

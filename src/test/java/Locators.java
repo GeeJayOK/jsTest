@@ -18,6 +18,6 @@ public interface Locators {
 
     //Test 3
     String URL_UPLD = "https://the-internet.herokuapp.com/upload";
-    String F_INPUT = "//input[@id='file-upload']";
+    String F_INPUT = "//input[@type='file']";
 
 }
