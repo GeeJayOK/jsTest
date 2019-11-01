@@ -1,13 +1,13 @@
 import org.junit.jupiter.api.*;
 
-public class TestJava extends BaseTest implements Locators {
+public class Test1 extends BaseTest implements Locators {
 
     private static BaseTest baseTest;
 
     @BeforeAll
     static void setUp() {
         baseTest = new BaseTest();
-        baseTest.getDriver();
+        baseTest.getDriver(URL_FRAME);
     }
 
     @Test
