@@ -1,9 +1,6 @@
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.*;
 
-public class Test extends BaseTest {
+public class TestJava extends BaseTest implements Locators {
 
     private static BaseTest baseTest;
     //private BaseTest baseTest = null;
@@ -14,14 +11,15 @@ public class Test extends BaseTest {
         baseTest.getDriver();
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("LEFT")
     void testLeftField() {
-        String a = baseTest.checker(locators.FR_L);
+        baseTest.switchToFrame(FR_L);
+        String a = baseTest.checker(L);
         System.out.println(a);
-        //Assertions.assertEquals(baseTest.checker(locators.FR_L),"LEFT");
+        Assertions.assertEquals(a,"LEFT");
+        baseTest.switchBack();
     }
-
 
     @AfterAll
     public static void tearDown() {
