@@ -13,7 +13,8 @@ public class Test3 extends BaseTest implements Locators {
     @DisplayName("Test upload file")
     void testHW1() {
         baseTest.getDriver(URL_UPLD);
-        baseTest.uploadFile("src/files/d1419eaf521bcd0cb9d84cab35a48815384a8c3ee21191122641d112b9c32a07.jpg");
+        baseTest.uploadFile("/home/user/IdeaProjects/jsTest/src/test/files/d1419eaf521bcd0cb9d84cab35a48815384a8c3ee21191122641d112b9c32a07.jpg");
+        baseTest.clickOnElement(UPLD_BUTT);
 
     }
 
