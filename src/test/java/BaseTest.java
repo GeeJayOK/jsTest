@@ -1,9 +1,7 @@
-import com.sun.xml.internal.ws.server.ServerRtException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest implements Locators {
@@ -48,6 +46,10 @@ public class BaseTest implements Locators {
 
     void uploadFile(String file) {
         driver.findElement(By.xpath(F_INPUT)).sendKeys(file);
+    }
+
+    void uploadFileDandD(String file) {
+        driver.findElement(By.xpath(DDU)).sendKeys(file);
     }
 
     public static void tearDown() {

@@ -20,5 +20,7 @@ public interface Locators {
     String URL_UPLD = "https://the-internet.herokuapp.com/upload";
     String F_INPUT = "//input[@type='file']";
     String UPLD_BUTT = "//input[@id='file-submit']";
-
+    String UPLOADED = "//div[contains(text(),'d1419eaf521bcd0cb9d84cab35a48815384a8c3ee21191122641d112b9c32a07.jpg')]";
+    String DDU = "//input[@class='dz-hidden-input']"; //"//div[@id='drag-drop-upload']";
+    String DROPPED = "//span[contains(text(),'d1419eaf521bcd0cb9d84cab35a48815384a8c3ee21191122641d112b9c32a07.jpg')]";
 }
